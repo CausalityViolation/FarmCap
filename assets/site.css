@@ -1,0 +1,101 @@
+/* Farm Capitalist landing page. Colours and edges follow the game: wood, parchment, gold, 3-4 px dark outlines. */
+@font-face { font-family: 'Press Start 2P'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/press-start-2p-latin.woff2') format('woff2'); }
+@font-face { font-family: 'DotGothic16'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/dotgothic16-landing.woff2') format('woff2'); }
+
+:root {
+  color-scheme: light;
+  --ink: #2a1b0e; --ink-soft: #6b5232;
+  --wood-900: #2b1c10; --wood-800: #3b2a1a; --wood-600: #6b4423;
+  --parch: #f4e4b6; --parch-2: #e6cf94; --parch-3: #cdb072; --cream: #fbf1d0;
+  --gold: #f7c93e; --gold-d: #c9951c;
+  --grass-1: #7ccb48; --grass-2: #58a832; --grass-4: #2f6b1d;
+  --logo: 'Press Start 2P', ui-monospace, 'Courier New', monospace;
+  --display: var(--logo);
+  --body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --h1: clamp(24px, 7.4vw, 50px); --tag: clamp(13px, 3.6vw, 18px); --h2: clamp(16px, 4.4vw, 22px); --h3: 13px; --btn: 14px; --small: 11px;
+}
+:root[lang='ja'] {
+  --display: 'DotGothic16', 'Press Start 2P', sans-serif;
+  --body: system-ui, -apple-system, 'Hiragino Sans', 'Yu Gothic UI', 'Noto Sans JP', sans-serif;
+  --tag: clamp(18px, 5vw, 26px); --h2: clamp(22px, 6vw, 30px); --h3: 19px; --btn: 19px; --small: 14px;
+  word-break: auto-phrase; line-break: strict;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--wood-900); color: var(--ink); font: 17px/1.65 var(--body); -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; }
+p { text-wrap: pretty; }
+h2, h3 { text-wrap: balance; }
+/* DotGothic16 is thin next to Press Start 2P: a half-pixel stroke gives its headings the same weight */
+:root[lang='ja'] :is(h2, h3, .cta, .eyebrow, .note, .strip, .tagline) { -webkit-text-stroke: 0.5px currentColor; }
+a { color: inherit; }
+:focus-visible { outline: 4px solid var(--gold); outline-offset: 3px; }
+
+/* The same flat wood as the game's top bar */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 16px; background: var(--wood-600); border-bottom: 4px solid var(--ink); color: var(--cream); }
+.brand { display: inline-flex; align-items: center; gap: 12px; white-space: nowrap; font: 14px/1 var(--logo); text-decoration: none; }
+.brand img { image-rendering: pixelated; border: 3px solid var(--ink); }
+.lang { font: var(--small)/1 var(--display); text-decoration: none; padding: 10px 12px; white-space: nowrap; border: 3px solid var(--ink); background: var(--parch); color: var(--ink); }
+.lang:hover { background: var(--gold); }
+.lang[lang='ja'] { font-family: var(--body); font-weight: 700; font-size: 14px; }
+
+/* Hero: the sky, a few clouds, the grass */
+.hero { position: relative; background:
+    url('cloud.svg') no-repeat 6% 14% / 84px,
+    url('cloud.svg') no-repeat 88% 8% / 64px,
+    url('cloud.svg') no-repeat 56% 46% / 48px,
+    linear-gradient(180deg, #4f86d6 0 18%, #78aef0 18% 38%, #a5d3f8 38% 62%, #cfeafb 62% 84%, #eaf7fd 84% 100%);
+  image-rendering: pixelated; }
+.hero-in { display: grid; gap: 32px; align-items: center; max-width: 1040px; margin: 0 auto; padding: 40px 16px 72px; }
+.hero-text { min-width: 0; text-align: center; }
+.eyebrow { display: inline-block; margin: 0 0 20px; padding: 8px 12px; background: var(--parch); border: 3px solid var(--ink); font: var(--small)/1.3 var(--display); }
+h1 { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; font: var(--h1)/1 var(--logo); color: var(--gold); text-transform: uppercase;
+  text-shadow: 3px 0 0 var(--ink), -3px 0 0 var(--ink), 0 3px 0 var(--ink), 0 -3px 0 var(--ink), 3px 3px 0 var(--ink), -3px -3px 0 var(--ink), 3px -3px 0 var(--ink), -3px 3px 0 var(--ink), 0 7px 0 var(--ink), 3px 7px 0 var(--ink), -3px 7px 0 var(--ink); }
+h1 span:first-child { font-size: 1.3em; }
+.tagline { margin: 28px 0 0; font: var(--tag)/1.4 var(--display); color: var(--cream);
+  text-shadow: 2px 0 0 var(--ink), -2px 0 0 var(--ink), 0 2px 0 var(--ink), 0 -2px 0 var(--ink), 2px 2px 0 var(--ink), -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink); }
+.lead { max-width: 34em; margin: 20px auto 0; padding: 14px 16px; background: rgba(251, 241, 208, 0.92); border: 3px solid var(--ink); text-align: left; }
+.cta-row { margin: 28px 0 0; }
+.cta, .badge { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+.cta { gap: 12px; min-height: 60px; padding: 14px 22px; background: var(--gold); color: var(--ink); font: var(--btn)/1.3 var(--display); border: 4px solid var(--ink); box-shadow: 0 6px 0 var(--gold-d), 0 6px 0 4px var(--ink); }
+a.cta:hover { background: #ffdf70; }
+a.cta:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--gold-d), 0 2px 0 4px var(--ink); }
+.cta.soon { background: var(--parch-2); box-shadow: 0 6px 0 var(--parch-3), 0 6px 0 4px var(--ink); }
+.note { margin: 28px 0 0; font: var(--small)/1.6 var(--display); color: var(--ink); }
+
+.phone { justify-self: center; width: min(78vw, 290px); padding: 10px; background: var(--ink); border: 4px solid var(--ink); border-radius: 22px; box-shadow: 8px 8px 0 rgba(42, 27, 14, 0.4); }
+.phone video { display: block; width: 100%; aspect-ratio: 9 / 16; background: #000; border-radius: 10px; }
+.grass { position: absolute; left: 0; right: 0; bottom: 0; height: 40px; background: linear-gradient(180deg, var(--grass-1) 0 8px, var(--grass-2) 8px 32px, var(--grass-4) 32px 100%); border-top: 4px solid var(--ink); }
+
+h2 { margin: 0 0 28px; font: var(--h2)/1.4 var(--display); text-align: center; }
+section { padding: 56px 16px; }
+.how { background: var(--parch); }
+.how h2 { color: var(--ink); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 24px; max-width: 1040px; margin: 0 auto; }
+.card { padding: 20px 20px 22px; background: var(--cream); border: 4px solid var(--ink); box-shadow: inset 0 0 0 3px var(--parch-2), 6px 6px 0 rgba(42, 27, 14, 0.35); }
+.sprite { display: block; width: 72px; height: 72px; margin: 0 0 14px; image-rendering: pixelated; }
+.card h3 { margin: 0 0 10px; font: var(--h3)/1.5 var(--display); }
+.card p { margin: 0; }
+.strip { max-width: 1040px; margin: 36px auto 0; padding: 12px 16px; background: var(--parch-2); border: 3px solid var(--ink); text-align: center; font: var(--small)/1.8 var(--display); }
+
+.look { padding-left: 0; padding-right: 0; color: var(--cream); background:
+    linear-gradient(45deg, rgba(0, 0, 0, 0.18) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.18) 75%) 0 0 / 16px 16px, var(--wood-800); }
+.shots { display: flex; gap: 20px; margin: 0; padding: 8px max(16px, calc(50vw - 520px)) 28px; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; }
+.shots li { flex: 0 0 auto; scroll-snap-align: center; }
+.shots img { display: block; width: 230px; height: auto; border: 4px solid var(--ink); background: var(--parch); box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.45); }
+
+.fair { background: var(--parch); text-align: center; }
+.fair p { max-width: 36em; margin: 0 auto; text-align: left; }
+.fair .cta-row { margin-top: 28px; text-align: center; }
+
+footer { padding: 28px 16px 40px; background: var(--wood-900); color: var(--cream); text-align: center; border-top: 4px solid var(--ink); font-size: 15px; }
+footer p { margin: 6px 0; }
+footer a { color: var(--gold); }
+
+@media (min-width: 860px) {
+  .hero-in { grid-template-columns: 1fr auto; gap: 56px; padding-top: 56px; }
+  .hero-text { text-align: left; }
+  h1 { align-items: flex-start; }
+  .lead { margin-left: 0; }
+}
