@@ -19,6 +19,7 @@
 <link rel="icon" type="image/png" href="assets/icon-96.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/site.css">
+<script src="assets/lightbox.js" defer></script>
 </head>
 <body>
 <header class="top">
@@ -85,15 +86,16 @@
 
   <section class="look">
     <h2>ゲーム画面</h2>
-    <ul class="shots" tabindex="0" role="group" aria-label="ゲームのスクリーンショット。横にスクロールすると続きが見られます。">
-        <li><img src="assets/shots/ja/01.jpg" width="230" height="460" loading="lazy" alt="植えて、収穫して、大もうけ！ 買える作物と、上の景色の中の農夫"></li>
-        <li><img src="assets/shots/ja/02.jpg" width="230" height="460" loading="lazy" alt="助っ人を雇おう：留守の間もせっせと稼いでくれる"></li>
-        <li><img src="assets/shots/ja/03.jpg" width="230" height="460" loading="lazy" alt="昼から夜へ：空はスマホの時計に合わせて変わる"></li>
-        <li><img src="assets/shots/ja/04.jpg" width="230" height="460" loading="lazy" alt="農場をおしゃれに：帽子・服・ペット・飾りが盛りだくさん"></li>
-        <li><img src="assets/shots/ja/05.jpg" width="230" height="460" loading="lazy" alt="なんでも強化：ゴールドで強化、ジェムで待ち時間スキップ"></li>
-        <li><img src="assets/shots/ja/06.jpg" width="230" height="460" loading="lazy" alt="収穫を出荷：黄金のタネで、次のシーズンはもっと豊かに"></li>
-        <li><img src="assets/shots/ja/07.jpg" width="230" height="460" loading="lazy" alt="トップ農家：毎週ほかの農場と競争"></li>
-        <li><img src="assets/shots/ja/08.jpg" width="230" height="460" loading="lazy" alt="ミッションとギフト：毎日のプレゼントや目標、宝箱"></li>
+    <p class="hint">画像をタップすると大きく表示されます。</p>
+    <ul class="shots" tabindex="0" role="group" aria-label="ゲームのスクリーンショット。横にスクロールすると続きが見られます。" data-close="閉じる" data-prev="前の画像" data-next="次の画像">
+        <li><a class="shot" href="assets/shots/ja/01-big.png"><img src="assets/shots/ja/01.jpg" width="230" height="460" loading="lazy" alt="植えて、収穫して、大もうけ！ 買える作物と、上の景色の中の農夫"></a></li>
+        <li><a class="shot" href="assets/shots/ja/02-big.png"><img src="assets/shots/ja/02.jpg" width="230" height="460" loading="lazy" alt="助っ人を雇おう：留守の間もせっせと稼いでくれる"></a></li>
+        <li><a class="shot" href="assets/shots/ja/03-big.png"><img src="assets/shots/ja/03.jpg" width="230" height="460" loading="lazy" alt="昼から夜へ：空はスマホの時計に合わせて変わる"></a></li>
+        <li><a class="shot" href="assets/shots/ja/04-big.png"><img src="assets/shots/ja/04.jpg" width="230" height="460" loading="lazy" alt="農場をおしゃれに：帽子・服・ペット・飾りが盛りだくさん"></a></li>
+        <li><a class="shot" href="assets/shots/ja/05-big.png"><img src="assets/shots/ja/05.jpg" width="230" height="460" loading="lazy" alt="なんでも強化：ゴールドで強化、ジェムで待ち時間スキップ"></a></li>
+        <li><a class="shot" href="assets/shots/ja/06-big.png"><img src="assets/shots/ja/06.jpg" width="230" height="460" loading="lazy" alt="収穫を出荷：黄金のタネで、次のシーズンはもっと豊かに"></a></li>
+        <li><a class="shot" href="assets/shots/ja/07-big.png"><img src="assets/shots/ja/07.jpg" width="230" height="460" loading="lazy" alt="トップ農家：毎週ほかの農場と競争"></a></li>
+        <li><a class="shot" href="assets/shots/ja/08-big.png"><img src="assets/shots/ja/08.jpg" width="230" height="460" loading="lazy" alt="ミッションとギフト：毎日のプレゼントや目標、宝箱"></a></li>
     </ul>
   </section>
 

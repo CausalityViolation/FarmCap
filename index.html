@@ -27,6 +27,7 @@
   } catch (e) {}
 </script>
 <link rel="stylesheet" href="assets/site.css">
+<script src="assets/lightbox.js" defer></script>
 </head>
 <body>
 <header class="top">
@@ -93,15 +94,16 @@
 
   <section class="look">
     <h2>Take a look</h2>
-    <ul class="shots" tabindex="0" role="group" aria-label="Screenshots of the game. Scroll sideways to see more.">
-        <li><img src="assets/shots/en/01.jpg" width="230" height="460" loading="lazy" alt="Plant. Grow. Profit! The farm, with crops to buy and the farmer in the scene above"></li>
-        <li><img src="assets/shots/en/02.jpg" width="230" height="460" loading="lazy" alt="Hire Farm Hands: they keep earning while you are away"></li>
-        <li><img src="assets/shots/en/03.jpg" width="230" height="460" loading="lazy" alt="Day turns to night: the sky follows your phone’s clock"></li>
-        <li><img src="assets/shots/en/04.jpg" width="230" height="460" loading="lazy" alt="Dress up your farm: hats, outfits, pets and decorations"></li>
-        <li><img src="assets/shots/en/05.jpg" width="230" height="460" loading="lazy" alt="Upgrade everything: make every crop earn more"></li>
-        <li><img src="assets/shots/en/06.jpg" width="230" height="460" loading="lazy" alt="Ship the harvest: Golden Seeds boost every season"></li>
-        <li><img src="assets/shots/en/07.jpg" width="230" height="460" loading="lazy" alt="Top Farmers: race other farms every week"></li>
-        <li><img src="assets/shots/en/08.jpg" width="230" height="460" loading="lazy" alt="Missions and gifts: daily gifts, goals and chests"></li>
+    <p class="hint">Click or tap a screenshot to see it larger.</p>
+    <ul class="shots" tabindex="0" role="group" aria-label="Screenshots of the game. Scroll sideways to see more." data-close="Close" data-prev="Previous screenshot" data-next="Next screenshot">
+        <li><a class="shot" href="assets/shots/en/01-big.png"><img src="assets/shots/en/01.jpg" width="230" height="460" loading="lazy" alt="Plant. Grow. Profit! The farm, with crops to buy and the farmer in the scene above"></a></li>
+        <li><a class="shot" href="assets/shots/en/02-big.png"><img src="assets/shots/en/02.jpg" width="230" height="460" loading="lazy" alt="Hire Farm Hands: they keep earning while you are away"></a></li>
+        <li><a class="shot" href="assets/shots/en/03-big.png"><img src="assets/shots/en/03.jpg" width="230" height="460" loading="lazy" alt="Day turns to night: the sky follows your phone’s clock"></a></li>
+        <li><a class="shot" href="assets/shots/en/04-big.png"><img src="assets/shots/en/04.jpg" width="230" height="460" loading="lazy" alt="Dress up your farm: hats, outfits, pets and decorations"></a></li>
+        <li><a class="shot" href="assets/shots/en/05-big.png"><img src="assets/shots/en/05.jpg" width="230" height="460" loading="lazy" alt="Upgrade everything: make every crop earn more"></a></li>
+        <li><a class="shot" href="assets/shots/en/06-big.png"><img src="assets/shots/en/06.jpg" width="230" height="460" loading="lazy" alt="Ship the harvest: Golden Seeds boost every season"></a></li>
+        <li><a class="shot" href="assets/shots/en/07-big.png"><img src="assets/shots/en/07.jpg" width="230" height="460" loading="lazy" alt="Top Farmers: race other farms every week"></a></li>
+        <li><a class="shot" href="assets/shots/en/08-big.png"><img src="assets/shots/en/08.jpg" width="230" height="460" loading="lazy" alt="Missions and gifts: daily gifts, goals and chests"></a></li>
     </ul>
   </section>
 
